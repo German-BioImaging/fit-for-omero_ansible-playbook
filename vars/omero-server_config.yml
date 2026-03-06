@@ -25,8 +25,9 @@
     - omero-cli-render
     - omero-metadata
     - omero-py
-    - "reportlab<3.6"
+    - reportlab
     - markdown
     - scipy
     - matplotlib
+
 
