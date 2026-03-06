@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+
+  vars_files:
+    - vars/vault.yml  # Encrypt/decrypt with ansible-vault
+    - vars/omero-server_config.yml
+
+    - role: ome.omero_server
+      omero_server_rootpassword: "{{ omero_root_pwd }}"
+      omero_server_dbuser: "{{ omero_db_user }}"
+      omero_server_dbname: "{{ omero_db_name }}"
+      omero_server_dbpassword: "{{ omero_db_pwd }}"
