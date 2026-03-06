@@ -2,6 +2,7 @@
 
 # See https://github.com/ome/ansible-role-omero-web for all playbook configs
 # See https://omero.readthedocs.io/en/stable/sysadmins/config.html for all omero configs
+  python_version: "3.12"
   omero_web_systemd_limit_nofile: 16384
   omero_figure_script_release: 7.4.0
   omero_web_config_set:
@@ -52,4 +53,5 @@
     - "django-redis==5.0.0"
   omero_web_setup_redis_session: true
   
+
 
