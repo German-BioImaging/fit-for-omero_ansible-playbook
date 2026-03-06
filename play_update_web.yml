@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+
+  vars_files:
+    - vars/vault.yml  # Encrypt/decrypt with ansible-vault
+    - vars/omero-web_config.yml
+
+  roles:
+    - role: ome.omero_web
+      omero_web_setup_nginx: false
