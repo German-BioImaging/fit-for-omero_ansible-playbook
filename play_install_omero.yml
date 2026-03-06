@@ -27,6 +27,7 @@
             - "{{ omero_db_name }}"
 
     - role: ome.omero_server
+      omero_server_selfsigned_certificates: true
       omero_server_rootpassword: "{{ omero_root_pwd }}"
       omero_server_dbuser: "{{ omero_db_user }}"
       omero_server_dbname: "{{ omero_db_name }}"
